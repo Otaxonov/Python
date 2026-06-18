@@ -1,7 +1,9 @@
-a = input("a:") # str
-b = input("b:") # str
+from math import pi
 
-a, b = int(a), int(b)
-c = a + b
+r1, r2, r3 = map(int, input().split())
 
-print(f"{a} + {b} = {c}")
+s1 = pi * pow(r1, 2)
+s2 = pi * pow(r2, 2)
+s3 = pi * pow(r3, 2)
+
+print(f"{s1:.2f} {s2:.2f} {s3:.2f}")
