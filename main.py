@@ -1,4 +1,4 @@
-from math import pi
+from math import pi, e, cos, sin, tan, log, sqrt
 
 r1, r2, r3 = map(int, input().split())
 
