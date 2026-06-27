@@ -1,14 +1,9 @@
-from math import sqrt
+from math import sin
 
-a, b, c = map(int, input().split())
+n = int(input())
 
-D = pow(b, 2) - 4 * a * c
-if D > 0:
-    x1 = (-b + sqrt(D)) / (2 * a)
-    x2 = (-b - sqrt(D)) / (2 * a)
-    print(f"{x1:.2f} {x2:.2f}")
-elif D == 0:
-    x = (-b) / (2 * a)
-    print(f"{x:.2f}")
-else:
-    print("NO")
+s = 0
+for i in range(1, n + 1):
+    s += sin(i) / pow(2, i)
+
+print(f"{s:.2f}")
