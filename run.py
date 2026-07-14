@@ -1,6 +1,11 @@
 def daraja(n):
-    return [i ** 2 for i in n]
+    for i in n:
+        yield i ** 2
 
-numbers = [1, 2, 3, 4, 5]
+numbers = [1, 2, 3, 4, 5, 6]
 
-print(daraja(numbers))
+kvadrat = daraja(numbers)
+
+print(next(kvadrat))
+print(next(kvadrat))
+print(next(kvadrat))
