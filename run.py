@@ -1,9 +1,6 @@
-# map(func, data), filter(condition(True), data)
+def daraja(n):
+    return [i ** 2 for i in n]
 
-data = [2, 6, 7, 89, 11, 100]
+numbers = [1, 2, 3, 4, 5]
 
-d1 = list(map(lambda a: a ** 2, data))
-print(d1)
-
-d2 = list(filter(lambda a: a % 2 == 0, data))
-print(d2)
+print(daraja(numbers))
