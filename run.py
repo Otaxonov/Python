@@ -1,11 +1,13 @@
-def daraja(n):
-    for i in n:
-        yield i ** 2
+def check_for_capitalize(func):
+    def check_for_isupper(name):
+        if name[0].isupper():
+            return func(name)
+        else:
+            return "The person's name should be written in capital letters."
+    return check_for_isupper
 
-numbers = [1, 2, 3, 4, 5, 6]
+@check_for_capitalize
+def say_hello(name):
+    print(f'Hello {name}!')
 
-kvadrat = daraja(numbers)
-
-print(next(kvadrat))
-print(next(kvadrat))
-print(next(kvadrat))
+print(say_hello(name='Sarvar'))
